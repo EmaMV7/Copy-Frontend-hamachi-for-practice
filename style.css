@@ -1,0 +1,108 @@
+* {    
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --white: #fff;
+}
+
+body {
+    font-family: Lato, sans-serif;
+    color: var(--white)
+}
+
+a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+/*  NAV  */
+
+header {
+    opacity: 0.95;    
+    background-image: url("./Images/0_header/hamachi-hero.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-color: #677e8e;    
+    top:0;
+    bottom:0;
+    align-items: center;
+
+    height: 100vh;
+}
+
+.header-nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.header-nav ul {
+    display: flex;
+    align-items: center;
+    margin-left:19px;
+    margin-right: 40px;
+}
+
+
+.header-nav li {
+    padding: 30px 22px;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.header-nav a {    
+    color: var(--white);
+}
+
+.header-nav a:hover{
+    text-decoration: underline;
+}
+
+#small-logo{
+    width: 0 auto;
+    height: 27px;
+}
+
+/*  MAIN SECTION     */
+
+#header-section{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+}
+
+#header-section > :not(.header-footer.OS-links) {
+    margin-bottom: 10px;
+  }
+
+.header-main-logo{
+    max-width: 300px;
+    margin: 200px 0 10px 0;
+}
+
+.button{
+    padding: 15px 30px;
+    background-color: #8cc22e;
+    border-radius: 4px;
+    box-shadow: 0 2px 0 #6e9924, 0 -2px 0 #a4d54e;
+}
+
+.OS-links a{
+    color: #4cb7ef;
+}
+
+
+.header-footer {
+    bottom: 0; 
+    position:absolute;
+    background-color: rgba(43,59,86,.3);
+    width: 100%;
+    padding: 20px;
+}
