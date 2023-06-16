@@ -270,14 +270,18 @@ header {
 
 #main-section-four {
     display: flex;
-    padding: 20px 0 80px;
+    padding: 20px 20px;
     border-top: 1px solid #ccc;
     
     justify-content: center;
     align-content: center;
 }
 #main-section-four div {
-    padding: 50px;
+    padding: 35px;
+}
+
+#main-section-four div > * {
+    margin-top: 30px;
 }
 
 #main-section-four div > h3 {
@@ -288,17 +292,197 @@ header {
 #main-section-four div > p {
     color: #555;
     font-weight: 300;
+    padding-bottom: 40px;
 }
 
-#main-section-four img {
-    
-    width: 90%;
-    height: 90%;
+#main-section-four img {    
+    width: 500px;
+    width: 500px;
+    align-self: center;
 }
 
+.option2 {
+    background-color: #4cb7ef;
+    box-shadow: 0 2px 0 #247499;
+    padding: 14px 23px;
+}
+
+.option2:hover{    
+    background-color: #69c1f0;
+}
+
+.linksOption2 {
+    padding-top: 15px;
+}
 /*  Main section 5  */
 
 #main-section-five {
+    display: flex;
+    flex-direction: column;
     background-color: #4cb7ef;
+
+    text-align: center;
+    align-items: center;
+
+    padding: 70px 20px 30px;
 }
+
+#main-section-five article {
+    max-width: 550px;
+    padding-bottom: 40px;
+}
+
+#main-section-five article > h3{
+    font-weight: 200;
+    font-size: 1rem;
+    padding-bottom: 10px;
+}
+
+#main-section-five div{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-top: 20px;
+
+}
+
+#packPrices{
+    position: relative;
+    grid-column-gap: 18px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+
+    max-width: 900px;
+    
+
+}
+
+#packPrices article{  
+    background: rgba(0,0,0,.1);
+    border-top: 2px solid #2d749a;
+    
+
+}
+
+.titlePrice{
+    
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #3c92bf;
+    padding-top: 10px;
+
+}
+
+.amountPrice{
+    font-size: 5rem;
+}
+
+.year{
+    align-self: end;
+}
+
+.description-price{
+    padding: 40px;
+    margin-bottom: 10px;
+
+}
+
+.button-buyNow{
+    background-color: #ddebf3;
+    box-shadow: 0 2px 0 #9fcce6, 0 -2px 0 white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    border-top: 5px #247499;
+}
+
+.button-buyNow:hover{
+    background-color: white;
+}
+
+#recommended-plan {
+    background-image: url('./Images/1_main/banner@2x.png');
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: -20px;
+    left: 16%;
+    margin-left: -140px;
+    background-size: 280px 50px;
+    height: 50px;
+        
+}
+
+#recommended-plan p {
+    padding-left: 53px;
+    top: 100px;
+}
+
+
+
+/*  Main section 6  */
+
+#main-section-six{
+    display: flex;
+    flex-direction: column;
+    padding: 0 15px;
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+#main-section-six p {
+    color: #2d749a;
+    font-size: 1.5rem;
+    padding-bottom: 17px;
+}
+
+#main-section-six a{
+    font-weight: 300;
+    font-size: 1.3rem;
+    padding: 10px 0 ;
+    color:#4cb7ef;
+
+}
+
+
+/*  FOOTER  */
+
+footer{
+    display: flex;
+    flex-direction: column;
+    background-color: #2d749a;    
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 70px;    
+}
+
+.footer{    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    color: rgba(255,255,255,.4);
+    list-style: none;    
+    min-width: 700px;
+}
+
+.footer ul{
+    padding-top: 20px;
+}
+
+
+.footer-items li{    
+    list-style: none;    
+    font-size: 0.9rem ;
+    font-weight: 300;
+    padding: 5px;
+}
+
+.footer-items a {
+    color: white;
+}
+
+#copyright{
+    font-size: 0.8rem;
+    color: rgba(255,255,255,.4);
+    padding: 70px 0 15px;
+}
+
 

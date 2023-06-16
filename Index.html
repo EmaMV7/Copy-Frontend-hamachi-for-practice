@@ -7,8 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
     <title>Practice-frontend-hamachi-copy</title>
 </head>
 <body>
@@ -156,9 +155,9 @@
                 <h3>Easy to set up. Easy to manage.</h3>
                 <p>Easily create, manage and maintain virtual private networks from anywhere with LogMeIn Hamachi, a hosted VPN service, that extends secure LAN-like network connectivity to mobile users and distributed teams on-demand over the web.</p>
                 
-                <a href="" class="button">Download now</a>
+                <a href="" class="option2 button">Download now</a>
                 
-                <p>
+                <p class="linksOption2 OS-links">
                     Free for <a href="">Windows</a>, 
                     <a href="">Mac</a> and
                     <a href="">Linux</a>
@@ -181,30 +180,40 @@
 
                 <!-- 49 -->
                 <article>
-                    <h3>STANDARD</h3>
-                    <p class="iconPrice">$</p> <p>49</p> <p id="year">/year</p>
+                    <h3 class="titlePrice">STANDARD</h3>
+                    <div>
+                        <p class="iconPrice">$</p> <p class="amountPrice">49</p> <p class="year">/year</p>
+                    </div>
                     <p class="description-price">6-32 computers/network</p>
 
                     <a href="" class="button-buyNow">Buy now</a>  
-                    <img src="" alt="" id="plan-recommended">                  
+                    <div id="recommended-plan" class="align-center">
+                        <p>RECOMMENDED PLAN</p>  
+                    </div>            
                 </article>
 
                 <!-- 199 -->
                 <article>
-                    <h3>STANDARD</h3>
-                    <p class="iconPrice">$</p> <p>199</p> <p id="year">/year</p>
+                    <h3 class="titlePrice">PREMIUM</h3>
+                    <div>
+                        <p class="iconPrice">$</p> <p class="amountPrice">199</p> <p class="year">/year</p>
+                    </div>
                     <p class="description-price">33-256 computers/network</p>
 
-                    <a href="" class="button-buyNow">Buy now</a>                    
+                    <a href="" class="button-buyNow">Buy now</a>  
+                             
                 </article>
 
                 <!-- 299 -->
                 <article>
-                    <h3>STANDARD</h3>
-                    <p class="iconPrice">$</p> <p>299</p> <p id="year">/year</p>
+                    <h3 class="titlePrice">MULTI-NETWORK</h3>
+                    <div>
+                        <p class="iconPrice">$</p> <p class="amountPrice">299</p> <p class="year">/year</p>
+                    </div>
                     <p class="description-price">up to 256/unlimited networks</p>
 
-                    <a href="" class="button-buyNow">Buy now</a>                    
+                    <a href="" class="button-buyNow">Buy now</a>  
+                             
                 </article>
             </div>
         </section>
@@ -219,24 +228,27 @@
         </section>
     </main>
 
+    
+        <!-- Footer -->
+
     <footer>
-        <ul>
+        <ul class="footer">
             <li> PRODUCT
-                <ul>
+                <ul class="footer-items">
                     <li><a href="">Features</a></li>
                     <li><a href="">Pricing</a></li>
                     <li><a href="">Resource Center</a></li>
                 </ul>
             </li>
             <li> COMPANY
-                <ul> 
+                <ul class="footer-items"> 
                     <li><a href="">Community</a></li>
                     <li><a href="">Site Map</a></li>
                     <li><a href="">Legal and Privacy</a></li>
                 </ul>
             </li>
             <li> CONNECT
-                <ul>
+                <ul class="footer-items">
                     <li><a href="">Blog</a></li>
                     <li><a href="">Twitter</a></li>
                     <li><a href="">Facebook</a></li>
