@@ -8,13 +8,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+
     <title>Practice-frontend-hamachi-copy</title>
 </head>
 <body>
 
-    <header>
-
-        <div class="header-nav">
+    <header>        
+        <div class="background-image"></div>  
+        <div class="header-nav menu">
             <ul>
                 <li><img src="./Images/0_header/hamachi-small.png" alt="" id="small-logo"></li>
                 <li><a href="">Features</a></li>
@@ -22,7 +23,7 @@
                 <li><a href="">Resource Center</a></li>
             </ul>
             <ul>
-                <li><a href="">Login</a></li>
+                <li><a href="">Log in</a></li>
                 <li><a href="">Sign up</a></li>
             </ul>
         </div>
@@ -45,12 +46,11 @@
             </div>
 
             <div class="header-footer">
-                <a href="">Learn more</a>
-                <img src="./Images/0_header/arrow.png">
+                <a href="">Learn more 
+                <img src="./Images/0_header/arrow.png"></a>
             </div>
 
         </section>
-
     </header>
 
     <main>
@@ -94,30 +94,32 @@
 
         <!-- Main section 2 -->
 
-        <section id="main-section-two">            
-            
-            <h2>Multiple Options for Instant & Managed Networks</h2>
-            
-            <!-- 1 -->
-            <article class="main-section-two__article">
-                <img src="./Images/1_main/gateway.png" alt="">
-                <h3>Gateway virtual networking</h3>
-                <p>Provide remote users with secure access to your private network/LAN from a centralized LogMeIn Hamachi gateway, without modifying firewalls or network routers.</p>
-            </article>   
-            
-            <!-- 2 -->
-            <article class="main-section-two__article">
-                <img src="./Images/1_main/hub-and-spoke.png" alt="">
-                <h3>Hub-and-spoke virtual networking</h3>
-                <p>Provide remote users with secure access to specific computers on your network from any location, without modifying firewalls or network routers.</p>
-            </article>    
+        <section class="color-background">            
+            <div id="main-section-two">   
+
+                <h2>Multiple Options for Instant & Managed Networks</h2>
                 
-            <!-- 3 -->
-            <article class="main-section-two__article">
-                <img src="./Images/1_main/mesh-network.png" alt="">             
-                <h3>Mesh networking</h3>
-                <p>Quickly and easily create a simple, virtual, mesh network that allows remote machines to directly connect to each other, thereby giving users basic network access to all the network resources they need.</p>
-            </article>   
+                <!-- 1 -->
+                <article class="main-section-two__article">
+                    <img src="./Images/1_main/gateway.png" alt="">
+                    <h3>Gateway virtual networking</h3>
+                    <p>Provide remote users with secure access to your private network/LAN from a centralized LogMeIn Hamachi gateway, without modifying firewalls or network routers.</p>
+                </article>   
+                
+                <!-- 2 -->
+                <article class="main-section-two__article">
+                    <img src="./Images/1_main/hub-and-spoke.png" alt="">
+                    <h3>Hub-and-spoke virtual networking</h3>
+                    <p>Provide remote users with secure access to specific computers on your network from any location, without modifying firewalls or network routers.</p>
+                </article>    
+                    
+                <!-- 3 -->
+                <article class="main-section-two__article">
+                    <img src="./Images/1_main/mesh-network.png" alt="">             
+                    <h3>Mesh networking</h3>
+                    <p>Quickly and easily create a simple, virtual, mesh network that allows remote machines to directly connect to each other, thereby giving users basic network access to all the network resources they need.</p>
+                </article>  
+            </div> 
         </section>
         
 
@@ -169,10 +171,10 @@
 
 
         <!-- Main section 5 -->
-        <section id="main-section-five">
+        <section id="pricing">
 
             <article>
-                <h3>Pricing</h3>
+                <h3 class="h3-section">Pricing</h3>
                 <p>Hamachi is free for up to 5 computers in your network. If you run Hamachi as a service in unattended mode, you can choose from our subscription packages below.</p>
             </article>
 
@@ -189,7 +191,7 @@
                     <a href="" class="button-buyNow">Buy now</a>  
                     <div id="recommended-plan" class="align-center">
                         <p>RECOMMENDED PLAN</p>  
-                    </div>            
+                    </div>
                 </article>
 
                 <!-- 199 -->
@@ -219,7 +221,7 @@
         </section>
 
         <!-- Main section 6 -->
-        <section id="main-section-six">
+        <section id="hamachi-resource-center">
             <p>Hamachi Resource Center</p>
             <a href="">Getting Started Guide (PDF)</a>
             <a href="">Support Center</a>

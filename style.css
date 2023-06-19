@@ -11,7 +11,7 @@
 body {
     font-family: 'Lato', sans-serif;
     color: var(--white);    
-    font-weight: 300;        
+    font-weight: 300;
 }
 
 a {
@@ -33,10 +33,8 @@ header {
 
 .header-nav {
     display: flex;
-    justify-content: space-between;
-    
+    justify-content: space-between;    
 }
-
 
 .header-nav ul {
     display: flex;
@@ -48,7 +46,6 @@ header {
     align-items: center;
 }
 
-
 .header-nav li {
     display: flex;
     padding: 30px 22px;
@@ -56,6 +53,8 @@ header {
 }
 
 .header-nav a {    
+    font-size: 0.85rem;
+    font-weight: 400;
     color: var(--white);
 }
 
@@ -68,9 +67,10 @@ header {
     height: 27px;
 }
 
-/*  HEADER - NAV     */
+/*  HEADER */
 
 #header-section{
+    margin-top: 20vh;
     display:flex;
     flex-direction: column;
     justify-content: center;
@@ -83,16 +83,15 @@ header {
     margin-bottom: 5px;
     max-width: 780px;
   }
+
 .header-main-logo{
-    width: 300px;
-    margin-top: 225px ;
+    width: 305px;
 }
 
 .header-title {
     font-size: 34px;
     font-weight: 300;
     padding-bottom: 5px;
-
 }
 
 .header-description {
@@ -105,7 +104,7 @@ header {
     margin-top: 13px;
     padding: 14px 23px;
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 400;
 
     color: var(--white);
     background-color: #8cc22e;
@@ -131,26 +130,32 @@ header {
     padding: 20px;
     font-weight: 100;
 
+
 }
 
-.header-footer > * {
-    margin-left: 5px;
+.header-footer > a {    
+    font-weight: 300;
 }
 
 .header-footer img{
-    width: 1.5vh;
+    
+    margin-left: 8px;
+    width: 1.8vh;
 }
 
 
 /*  MAIN SECTION 1  */
 
 #main-section-one{
-    padding: 20px 0;
+    padding: 20px 0 50px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    color:#2d749a;    
+    color:#2d749a;
     grid-gap: 10px;
+
     min-width: 100px;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
 #main-section-one h2 {
@@ -163,7 +168,7 @@ header {
 #main-section-one article {
     display: grid;
     grid-template-columns: 1fr auto;
-    padding: 30px;
+    padding: 20px 50px 0  50px;
 }
 
 #main-section-one article h3 {
@@ -178,6 +183,7 @@ header {
 
 #main-section-one article > p {
     align-items: start;
+    color: #555;
 }
 #main-section-one article > * {
     padding: 5px 10px ;
@@ -188,10 +194,15 @@ header {
 #main-section-two {
     padding: 20px 0 80px;
     display: grid;
-    background-color: #4cb7ef;
     grid-template-columns: 1fr 1fr 1fr;
     justify-content: center;
     align-content: center;
+    margin: 0 auto;
+    max-width: 1030px;
+}
+
+.color-background{    
+    background-color: #4cb7ef;  
 }
 
 #main-section-two h2 {
@@ -209,8 +220,6 @@ header {
 .main-section-two__article {
     padding-left: 25px;
     margin: 0 25px;
-
-    max-width: 271px;
 }
 
 .main-section-two__article > img {
@@ -219,12 +228,14 @@ header {
 
 .main-section-two__article > h3 {
     font-weight: 400;
-    text-shadow: 0 3px 0 hsla(0, 0%, 0%, 0.233);
+    text-shadow: 0 2px 0 hsla(0, 0%, 0%, 0.233);
     margin-bottom: 10px;
 }
 
 .main-section-two__article > p {
     opacity: .85;
+    font-size: 1rem;
+    padding-top: 7px;
 }
 
 
@@ -238,6 +249,7 @@ header {
 
     text-align: center;
     margin: 0 auto;
+    max-width: 1030px;
 }
 
 #main-section-three h2{
@@ -249,7 +261,7 @@ header {
 
 .main-section-three__article {
     margin: 0 auto;
-    max-width: 230px;
+    max-width: 240px;
 }
 .main-section-three__article img{
     width: 90px;
@@ -282,6 +294,7 @@ header {
 
 #main-section-four div > * {
     margin-top: 30px;
+    max-width: 600px;
 }
 
 #main-section-four div > h3 {
@@ -296,8 +309,7 @@ header {
 }
 
 #main-section-four img {    
-    width: 500px;
-    width: 500px;
+    width: 25%;
     align-self: center;
 }
 
@@ -314,9 +326,12 @@ header {
 .linksOption2 {
     padding-top: 15px;
 }
+
+
 /*  Main section 5  */
 
-#main-section-five {
+
+#pricing {
     display: flex;
     flex-direction: column;
     background-color: #4cb7ef;
@@ -324,25 +339,25 @@ header {
     text-align: center;
     align-items: center;
 
-    padding: 70px 20px 30px;
+    padding: 70px 20px 65px;
 }
 
-#main-section-five article {
+#pricing article {
     max-width: 550px;
     padding-bottom: 40px;
 }
 
-#main-section-five article > h3{
-    font-weight: 200;
-    font-size: 1rem;
+.h3-section{
+    font-weight: 300;
+    font-size: 1.5rem;
     padding-bottom: 10px;
 }
 
-#main-section-five div{
+#pricing div{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     padding-top: 20px;
-
+    max-width: 1000px;
 }
 
 #packPrices{
@@ -354,8 +369,6 @@ header {
     align-items: center;
 
     max-width: 900px;
-    
-
 }
 
 #packPrices article{  
@@ -365,16 +378,18 @@ header {
 
 }
 
-.titlePrice{
-    
+.titlePrice{    
     font-family: Arial, Helvetica, sans-serif;
     background-color: #3c92bf;
-    padding-top: 10px;
-
+    padding: 10px 0 ;
+    
+    font-weight: 300;
+    font-size: 1rem;
 }
 
 .amountPrice{
     font-size: 5rem;
+    text-shadow: 0 1px 0 hsla(0, 0%, 33%, 0.534);
 }
 
 .year{
@@ -384,7 +399,6 @@ header {
 .description-price{
     padding: 40px;
     margin-bottom: 10px;
-
 }
 
 .button-buyNow{
@@ -420,21 +434,24 @@ header {
 
 /*  Main section 6  */
 
-#main-section-six{
+#hamachi-resource-center{
     display: flex;
     flex-direction: column;
     padding: 0 15px;
-    padding-top: 60px;
+    padding-top: 70px;
     padding-bottom: 40px;
+
+    margin: 0 auto;
+    max-width: 900px;
 }
 
-#main-section-six p {
+#hamachi-resource-center p {
     color: #2d749a;
     font-size: 1.5rem;
     padding-bottom: 17px;
 }
 
-#main-section-six a{
+#hamachi-resource-center a{
     font-weight: 300;
     font-size: 1.3rem;
     padding: 10px 0 ;
@@ -452,30 +469,36 @@ footer{
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding-top: 70px;    
+    padding-top: 70px;
 }
 
 .footer{    
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     color: rgba(255,255,255,.4);
-    list-style: none;    
-    min-width: 700px;
+    list-style: none;
 }
 
 .footer ul{
     padding-top: 20px;
+    
+}
+
+.footer li{    
+    font-size:0.9rem;    
+    padding: 0 100px;
 }
 
 
 .footer-items li{    
     list-style: none;    
-    font-size: 0.9rem ;
+    font-size: 0.8rem ;
     font-weight: 300;
     padding: 5px;
 }
 
-.footer-items a {
+.footer-items a {    
+    font-weight: 300;
     color: white;
 }
 
@@ -484,5 +507,91 @@ footer{
     color: rgba(255,255,255,.4);
     padding: 70px 0 15px;
 }
+
+/*  Tablet and cellphone */
+@media screen and (max-width:750px){
+
+    /* NAV */
+    .header-nav{
+        flex-wrap: wrap;
+    }
+    /* Header */
+
+    body {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 750px;
+    }
+    .header-main-logo{
+        width: 45vh;
+        justify-content: center;
+    }    
+    .header-title{
+        font-size: 1.8rem;
+        text-shadow: 0 2px 0 #585858;
+    }
+
+    .header-description{
+        font-size: 1rem;;
+        text-shadow: 0 2px 0 #585858;
+    }
+
+    /* Section 1 */
+    #main-section-one{
+        grid-template-columns: 1fr;
+    }
+
+    #main-section-one h2{
+        grid-column: 1 / span 1;
+    }
+
+
+    /* Section 2 */
+    #main-section-two{        
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    #main-section-two h2{
+        grid-column: 1 / span 1;
+    }
+
+    /* Section 3 */
+    #main-section-three{        
+        grid-template-columns: 1fr;
+    }
+
+    #main-section-three h2{
+        grid-column: 1 / span 1;
+    }
+
+    /* Section 4 */
+    #main-section-four img{
+        display: none;
+    }
+    
+    /* Section 5 */
+    #pricing div{                
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Section 6 */
+    #hamachi-resource-center{
+        max-width: 650px;
+    }
+
+    /* Footer */
+    .footer {
+        width: 97.9vw;;
+    }
+    
+    .footer li{    
+        font-size:0.9rem;    
+        padding: 0 0px;
+}
+
+}
+
 
 
