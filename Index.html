@@ -15,7 +15,22 @@
 
     <header>        
         <div class="background-image"></div>  
-        <div class="header-nav menu">
+
+        <div id="fixed-header">         
+            <ul>
+                
+                <li><img src="./Images/0_header/hamachi-small.png" alt="" id="small-logo"></li>
+                <li><a href="">Features</a></li>
+                <li><a href="">Pricing</a></li>
+                <li><a href="">Resource Center</a></li>
+            </ul>
+            <ul>
+                <li><a href="">Log in</a></li>
+                <li><a href="">Sign up</a></li>
+            </ul>
+        </div>
+
+        <div class="header-nav" id="menu-mobile">
             <ul>
                 <li><img src="./Images/0_header/hamachi-small.png" alt="" id="small-logo"></li>
                 <li><a href="">Features</a></li>
@@ -49,8 +64,21 @@
                 <a href="">Learn more 
                 <img src="./Images/0_header/arrow.png"></a>
             </div>
+            
+        </section>  
 
-        </section>
+        <div id="nav-mobile">
+            <img src="./Images/0_header/main-logo-black.png" alt="" class="menu-logo">
+            <ul class="options">
+                <li><a href="">Features <img src="./Images/0_header/arrow-menu.png" class="menu-arrow"></a></li>
+                <li><a href="">Pricing <img src="./Images/0_header/arrow-menu.png" class="menu-arrow"></a></li>
+                <li><a href="">Resource Center <img src="./Images/0_header/arrow-menu.png" class="menu-arrow"></a></li>
+            </ul>
+            <ul class="fondo">
+                <li><a href="" class="log-in">Log in</a></li>
+                <li><a href="" class="sign-up">Sign up</a></li>
+            </ul>
+        </div>
     </header>
 
     <main>
@@ -264,5 +292,6 @@
 
     </footer>
     
+    <script src="./script.js"></script>
 </body>
 </html>

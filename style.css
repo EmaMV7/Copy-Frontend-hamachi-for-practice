@@ -515,6 +515,123 @@ footer{
     .header-nav{
         flex-wrap: wrap;
     }
+    
+    /* NAV - fixed */
+
+    a, li, ul{
+        color: #000;
+        list-style: none;
+        text-decoration: none;
+    }
+
+    #fixed-header {
+        background: rgba(45,116,154,.96);
+        display: flex;
+        height: 90px;
+        width: 100%;    
+        
+        justify-content: space-between;
+        align-items:center;
+
+        
+        -webkit-transition: all .4s ease-out;
+        transition: all .4s ease-out;
+    }
+
+    #fixed-header ul{
+        display: flex;  
+        justify-content: center;
+        align-items: center; 
+        
+        margin: 0 40px 0 20px;  
+    }
+
+    #fixed-header ul > li{    
+        margin: 0 21px;
+    }
+
+    #fixed-header a {    
+        color: white;
+    }
+
+    #small-logo{
+        height: 27px;
+        width: 27px;
+    }
+
+
+    /* NAV - mobile */
+
+    #nav-mobile{
+        position: relative;
+        padding: 20px; 
+        height: 100vh; 
+        font-size: 1rem;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    
+    .options a {
+        position:relative;
+        padding: 10px;
+        font-weight: bold;
+        font-size: 1rem;
+        color: rgb(26, 104, 146);        
+    }
+
+    .options li {        
+        display: flex;
+    }
+
+    .menu-logo{
+        height: 25px;
+        margin: 10px 5px 17px;
+    }
+
+    .menu-arrow{
+        position:absolute;
+        right: 0;
+        width: 2.2vh;
+    }
+
+    #nav-mobile li{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #nav-mobile ul {
+        margin-top: auto; /* Añadido para empujar los botones al fondo */
+    }
+
+    
+    .fondo{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        margin: 20px;
+    }
+
+    .log-in, .sign-up{        
+        text-align: center;
+        justify-content: center;
+
+        width: 100%;
+        padding: 20px 0 20px;
+        border-radius: 4px;        
+    }
+
+    .log-in{
+        
+        color: rgba(28, 134, 190, 0.96);
+        border: 3px solid #66b9e681;
+        font-weight: bold;
+    }
+    .sign-up{
+        color:black;
+        font-size: 0.9rem;
+        text-decoration: underline;
+    }
+
     /* Header */
 
     body {
@@ -592,6 +709,8 @@ footer{
 }
 
 }
+
+
 
 
 
