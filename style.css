@@ -4,8 +4,13 @@
     padding: 0;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 :root {
     --white: #fff;
+    --skyblue: #4cb7ef;
 }
 
 body {
@@ -14,14 +19,67 @@ body {
     font-weight: 300;
 }
 
+.scroll{
+    scroll-margin-top:87px;
+}
+
+.active {
+    display: flex;
+}
+
+.hidden {
+    display: none;
+    opacity: 0;
+    
+    transition: all 0.4 ease-out;
+}
+
+.open {
+    visibility: visible;
+    opacity: 1;
+    top: 0;
+    transition: all 0.4 ease-out;
+}
+
+.close {
+    opacity: 0;
+    top: -90px;
+    visibility: hidden;
+    transition: all 0.4 ease-out;    
+    -webkit-transition: all .4s ease-out;
+}
+
+.open2{
+    visibility: visible;
+    opacity: 1;
+}
+
+.close2{
+    visibility: hidden;
+    opacity: 0;
+}
+
+#nav-fixed {
+    z-index: 999;
+    position: fixed;
+    width: 100%;
+    background-color: rgba(45,116,154,.96);
+    
+    -webkit-transition: all .4s ease-out;
+    transition: all .4s ease-out;
+}
+
 a {
     text-decoration: none;
-    color: var(--white);
     font-weight: 400;
-    color: #4cb7ef;
+    color:var(--skyblue);  
 }
 
 /*  NAV  */
+
+.header-mobile{
+    display: none;
+}
 
 header {
     background-image: url("./Images/0_header/hamachi-hero.jpeg");
@@ -33,7 +91,7 @@ header {
 
 .header-nav {
     display: flex;
-    justify-content: space-between;    
+    justify-content: space-between;
 }
 
 .header-nav ul {
@@ -69,9 +127,9 @@ header {
 
 /*  HEADER */
 
-#header-section{
+.header-section{
     margin-top: 20vh;
-    display:flex;
+    /* display:flex; */
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -79,7 +137,7 @@ header {
     text-align: center;
 }
 
-#header-section > :not(.header-footer) {
+.header-section > :not(.header-footer) {
     margin-bottom: 5px;
     max-width: 780px;
   }
@@ -129,8 +187,6 @@ header {
     width: 100%;
     padding: 20px;
     font-weight: 100;
-
-
 }
 
 .header-footer > a {    
@@ -141,6 +197,32 @@ header {
     
     margin-left: 8px;
     width: 1.8vh;
+}
+
+/*   MAIN    */
+
+.anchor{
+    position: fixed;
+    background-image: url('./Images/1_main/arrow-anchor.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid rgba(26, 61, 71, 0.61);
+    background-color: rgba(255, 255, 255, 0.541);
+    right: 20px;
+    bottom: 20px;
+    z-index: 60;
+    
+    transition: all 0.4 ease-out;    
+    -webkit-transition: all .4s ease-out;
+}
+
+.anchor:hover{
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgba(26, 145, 179, 0.774);
 }
 
 
@@ -168,7 +250,7 @@ header {
 #main-section-one article {
     display: grid;
     grid-template-columns: 1fr auto;
-    padding: 20px 50px 0  50px;
+    padding: 20px 50px 0 50px;
 }
 
 #main-section-one article h3 {
@@ -202,7 +284,7 @@ header {
 }
 
 .color-background{    
-    background-color: #4cb7ef;  
+    background-color: var(--skyblue);  
 }
 
 #main-section-two h2 {
@@ -218,7 +300,7 @@ header {
     margin: 0 auto;    
 }
 .main-section-two__article {
-    padding-left: 25px;
+    padding: 0 10px;
     margin: 0 25px;
 }
 
@@ -314,7 +396,7 @@ header {
 }
 
 .option2 {
-    background-color: #4cb7ef;
+    background-color: var(--skyblue);
     box-shadow: 0 2px 0 #247499;
     padding: 14px 23px;
 }
@@ -334,7 +416,7 @@ header {
 #pricing {
     display: flex;
     flex-direction: column;
-    background-color: #4cb7ef;
+    background-color: var(--skyblue);  
 
     text-align: center;
     align-items: center;
@@ -344,23 +426,16 @@ header {
 
 #pricing article {
     max-width: 550px;
-    padding-bottom: 40px;
+    padding-bottom: 50px;
 }
 
 .h3-section{
     font-weight: 300;
     font-size: 1.5rem;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
 }
 
-#pricing div{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    padding-top: 20px;
-    max-width: 1000px;
-}
-
-#packPrices{
+.plans{
     position: relative;
     grid-column-gap: 18px;
     display: grid;
@@ -368,37 +443,50 @@ header {
     justify-content: center;
     align-items: center;
 
-    max-width: 900px;
+    max-width: 1000px;
+    width: 100%;
 }
 
-#packPrices article{  
+.plans--card{  
     background: rgba(0,0,0,.1);
     border-top: 2px solid #2d749a;
-    
-
+    height: 330px;
+    max-width: 500px;
 }
 
 .titlePrice{    
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: sans-serif;
     background-color: #3c92bf;
     padding: 10px 0 ;
     
-    font-weight: 300;
+    font-weight: 100;
     font-size: 1rem;
 }
 
 .amountPrice{
-    font-size: 5rem;
+    margin-top: 24px;
+    display: flex;
+    justify-content: center;
+    font-size: 4.8rem;
     text-shadow: 0 1px 0 hsla(0, 0%, 33%, 0.534);
 }
-
+.icon-Price{
+    font-size: 1rem;
+    align-self: start;
+    opacity: 0.85;
+    margin-top:20px;
+    margin-left:10px;
+}
 .year{
+    font-size: 1rem;
     align-self: end;
+    opacity: 0.85;
+    margin-bottom: 12px;
 }
 
 .description-price{
-    padding: 40px;
-    margin-bottom: 10px;
+    margin-top: 30px;
+    margin-bottom: 50px;
 }
 
 .button-buyNow{
@@ -414,6 +502,7 @@ header {
 }
 
 #recommended-plan {
+    width: 100%;
     background-image: url('./Images/1_main/banner@2x.png');
     background-repeat: no-repeat;
     position: absolute;
@@ -421,13 +510,13 @@ header {
     left: 16%;
     margin-left: -140px;
     background-size: 280px 50px;
-    height: 50px;
-        
+    height: 50px;        
 }
 
 #recommended-plan p {
+    position: absolute;
     padding-left: 53px;
-    top: 100px;
+    bottom: 10px;
 }
 
 
@@ -455,7 +544,7 @@ header {
     font-weight: 300;
     font-size: 1.3rem;
     padding: 10px 0 ;
-    color:#4cb7ef;
+    color: var(--skyblue);  
 
 }
 
@@ -486,7 +575,7 @@ footer{
 
 .footer li{    
     font-size:0.9rem;    
-    padding: 0 100px;
+    padding: 0 10vh;
 }
 
 
@@ -508,66 +597,56 @@ footer{
     padding: 70px 0 15px;
 }
 
+
+
 /*  Tablet and cellphone */
 @media screen and (max-width:750px){
 
-    /* NAV */
+    .scroll{
+        scroll-margin-top:0px;
+    }
+
+    /* HEADER Desktop */
     .header-nav{
-        flex-wrap: wrap;
+        display: none;
     }
     
-    /* NAV - fixed */
+    /* HEADER Mobile */
 
-    a, li, ul{
-        color: #000;
-        list-style: none;
-        text-decoration: none;
+    .header-mobile{
+        display: block;
     }
 
-    #fixed-header {
-        background: rgba(45,116,154,.96);
+    .header-mobile ul{
         display: flex;
-        height: 90px;
-        width: 100%;    
-        
         justify-content: space-between;
-        align-items:center;
-
-        
-        -webkit-transition: all .4s ease-out;
-        transition: all .4s ease-out;
-    }
-
-    #fixed-header ul{
-        display: flex;  
-        justify-content: center;
-        align-items: center; 
-        
-        margin: 0 40px 0 20px;  
-    }
-
-    #fixed-header ul > li{    
-        margin: 0 21px;
-    }
-
-    #fixed-header a {    
-        color: white;
+        padding: 30px 50px;
+        list-style: none;
     }
 
     #small-logo{
-        height: 27px;
-        width: 27px;
+        height: 40px;
+        width: 40px;
     }
 
+    .icon-menu{
+        width: 30px;
+        cursor:pointer;
+    }
 
-    /* NAV - mobile */
+    /* NAV - Mobile */
 
-    #nav-mobile{
+    .nav-mobile{
         position: relative;
         padding: 20px; 
-        height: 100vh; 
+        height: 83vh; 
         font-size: 1rem;
         font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        background-color: white;
+        z-index: 1000;
+
+        border: 3px solid hsla(0, 0%, 33%, 0.205);
+        border-radius: 4px;
     }
     
     .options a {
@@ -593,22 +672,17 @@ footer{
         width: 2.2vh;
     }
 
-    #nav-mobile li{
+    .nav-mobile li{
         display: flex;
         flex-direction: column;
     }
-
-    #nav-mobile ul {
-        margin-top: auto; /* Añadido para empujar los botones al fondo */
-    }
-
     
     .fondo{
         position: absolute;
         bottom: 0;
         right: 0;
         left: 0;
-        margin: 20px;
+        margin: 40px;
     }
 
     .log-in, .sign-up{        
@@ -632,34 +706,42 @@ footer{
         text-decoration: underline;
     }
 
-    /* Header */
+    /* Header */  
 
-    body {
-        display: flex;
-        flex-wrap: wrap;
-        max-width: 750px;
+    .header-section{
+        margin-top: 15%;
     }
+
     .header-main-logo{
-        width: 45vh;
+        width: 40vh;
+
         justify-content: center;
     }    
     .header-title{
+        width: 88%;
         font-size: 1.8rem;
         text-shadow: 0 2px 0 #585858;
     }
 
     .header-description{
+        width: 88%;
         font-size: 1rem;;
         text-shadow: 0 2px 0 #585858;
     }
+
+    
 
     /* Section 1 */
     #main-section-one{
         grid-template-columns: 1fr;
     }
 
-    #main-section-one h2{
+    #main-section-one > h2{
         grid-column: 1 / span 1;
+    }
+    
+    #main-section-one > article{
+        padding: 5% 8% 0 8%;
     }
 
 
@@ -671,6 +753,7 @@ footer{
     
     #main-section-two h2{
         grid-column: 1 / span 1;
+        padding: 50px 10px;
     }
 
     /* Section 3 */
@@ -682,16 +765,129 @@ footer{
         grid-column: 1 / span 1;
     }
 
-    /* Section 4 */
-    #main-section-four img{
-        display: none;
+    #main-section-three article{        
+        max-width: 85%;
     }
     
-    /* Section 5 */
-    #pricing div{                
-        grid-template-columns: 1fr;
+
+    /* Section 4 */
+    
+    #main-section-four{
+        position: relative;
+        overflow: hidden;
+    }
+    #main-section-four img{
+        display: none;        
+    }
+    .mobile-image-bubble{
+        width: 20%;
+        height: 50%;
+        position: absolute;
+        background-image: url('./Images/1_main/hamachi-bubble.png');
+        right: 0;
+        bottom: 0;
+        background-repeat: no-repeat;
+        background-size: cover;
+        opacity: 0.2;
+        transform: translate( 0%, 20%);
+        z-index: 55;
+        
+    }
+    
+    /* Section 5 Pricing */
+    #pricing{
+        display: block;
+        padding: 58px 7px 65px;
+    }
+    #pricing article{        
+        max-width: 90%;
+        margin: 0 auto;
     }
 
+    .plans{
+        display: flex;
+        grid-column-gap: 52px;
+        overflow-x: scroll;
+        overscroll-behavior-x: contain;
+        scroll-snap-type: x proximity;
+        justify-content: initial;
+        padding: 0px 17vw;
+    }
+
+    .plans::-webkit-scrollbar {
+        height: 8px;
+    }
+
+    .plans::-webkit-scrollbar-thumb{
+        background-color: #ffffff;
+        border-radius: 4px;
+    }
+
+    .plans::-webkit-scrollbar-track{
+        border-radius: 4px;
+        background-color: #ffffff59;
+    }
+    .plans::-webkit-scrollbar-button{
+        
+        height: 8px;
+
+    }
+
+
+    .plans--card{   
+        position: relative;
+        width: 70%;
+        min-width: 270px;
+        max-width: 300px;
+        height: 325px;
+        margin: 15px auto 0;
+        scroll-snap-align: center;
+
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 42px;
+
+    }
+
+    .amountPrice{
+        margin-top:20px;
+        margin-right: 10px;
+        font-size: 5.5rem;
+        }
+    
+    .icon-Price{
+        position: absolute;
+        margin: 10px 0 0 -100px;
+    }
+    .icon-Price2{        
+        position: absolute;
+        margin: 10px 156px 0 0;
+    }
+    
+    .year{
+        position: absolute;
+        margin: 0 0 15px 125px;
+    }
+
+    .year-2{
+        position: absolute;
+        margin: 0 0 15px 175px;
+    }
+
+    .description-price{
+        margin-top: 20px;
+        margin-bottom: 50px;
+    }
+
+    #recommended-plan{
+        left: 50%;     
+        width: 100vw;
+    }
+
+    #recommended-plan p{
+        position: absolute;
+        top:40%;
+    }
 
     /* Section 6 */
     #hamachi-resource-center{
@@ -700,14 +896,13 @@ footer{
 
     /* Footer */
     .footer {
-        width: 97.9vw;;
+        width: 100%;;
     }
     
     .footer li{    
         font-size:0.9rem;    
-        padding: 0 0px;
-}
-
+        padding: 5px 0;
+    }
 }
 
 

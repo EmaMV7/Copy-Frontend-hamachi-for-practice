@@ -13,16 +13,26 @@
 </head>
 <body>
 
-    <header>        
+    <header>  
+        
+        <div id="go-up"></div>
         <div class="background-image"></div>  
 
-        <div id="fixed-header">         
+        <!-- NAV Mobile -->
+        <div class="header-mobile">
             <ul>
-                
-                <li><img src="./Images/0_header/hamachi-small.png" alt="" id="small-logo"></li>
-                <li><a href="">Features</a></li>
-                <li><a href="">Pricing</a></li>
-                <li><a href="">Resource Center</a></li>
+                <li><img src="./Images/0_header/hamachi-small.png" alt="" id="small-logo"></li>                
+                <li><img src="./Images/0_header/menu-icon-white.png" alt="" class="icon-menu"></li>
+            </ul>
+        </div>
+
+        <!-- NAV Desktop fixed -->
+        <div id="nav-fixed" class="header-nav close">
+            <ul>
+                <li><img src="./Images/0_header/hamachi-small.png"  alt="" id="small-logo"></li>
+                <li><a href="#main-section-one">Features</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#hamachi-resource-center">Resource Center</a></li>
             </ul>
             <ul>
                 <li><a href="">Log in</a></li>
@@ -30,12 +40,13 @@
             </ul>
         </div>
 
-        <div class="header-nav" id="menu-mobile">
+        <!-- NAV Desktop -->
+        <div class="header-nav">
             <ul>
                 <li><img src="./Images/0_header/hamachi-small.png" alt="" id="small-logo"></li>
-                <li><a href="">Features</a></li>
-                <li><a href="">Pricing</a></li>
-                <li><a href="">Resource Center</a></li>
+                <li><a href="#main-section-one">Features</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#hamachi-resource-center">Resource Center</a></li>
             </ul>
             <ul>
                 <li><a href="">Log in</a></li>
@@ -43,7 +54,23 @@
             </ul>
         </div>
 
-        <section id="header-section">
+        
+        <!-- MENU mobile -->
+        <div class="nav-mobile hidden">
+            <img src="./Images/0_header/main-logo-black.png" alt="" class="menu-logo">
+            <ul class="options">
+                <li><a href="#main-section-one">Features <img src="./Images/0_header/arrow-menu.png" class="menu-arrow"></a></li>
+                <li><a href="#pricing">Pricing <img src="./Images/0_header/arrow-menu.png" class="menu-arrow"></a></li>
+                <li><a href="#hamachi-resource-center">Resource Center <img src="./Images/0_header/arrow-menu.png" class="menu-arrow"></a></li>
+            </ul>
+            <ul class="fondo">
+                <li><a href="" class="log-in">Log in</a></li>
+                <li><a href="" class="sign-up">Sign up</a></li>
+            </ul>
+        </div>
+
+        <!--  HEADER  -->
+        <section class="header-section active">
 
             <img src="./Images/0_header/main-logo.png" alt="" class="header-main-logo">
             <h1 class="header-title">Create virtual private networks on-demand</h1>
@@ -61,31 +88,19 @@
             </div>
 
             <div class="header-footer">
-                <a href="">Learn more 
+                <a href="#main-section-one">Learn more 
                 <img src="./Images/0_header/arrow.png"></a>
             </div>
             
-        </section>  
-
-        <div id="nav-mobile">
-            <img src="./Images/0_header/main-logo-black.png" alt="" class="menu-logo">
-            <ul class="options">
-                <li><a href="">Features <img src="./Images/0_header/arrow-menu.png" class="menu-arrow"></a></li>
-                <li><a href="">Pricing <img src="./Images/0_header/arrow-menu.png" class="menu-arrow"></a></li>
-                <li><a href="">Resource Center <img src="./Images/0_header/arrow-menu.png" class="menu-arrow"></a></li>
-            </ul>
-            <ul class="fondo">
-                <li><a href="" class="log-in">Log in</a></li>
-                <li><a href="" class="sign-up">Sign up</a></li>
-            </ul>
-        </div>
+        </section>
     </header>
 
     <main>
+        <a href="#go-up" class="anchor close2"></a>
 
         <!-- Main section 1 -->
 
-        <section id="main-section-one">
+        <section id="main-section-one" class="scroll">
             
             <h2>Web-Based Management</h2>
 
@@ -94,7 +109,6 @@
                 <img src="./Images/1_main/on-demand.png" alt="">               
                 <h3>On-demand networking</h3>
                 <p>Create and manage virtual networks on-demand as you need them.</p>
-
             </article>
 
             <!-- 2 -->
@@ -105,7 +119,7 @@
             </article>
 
             <!-- 3 -->
-            <article>              
+            <article class="main-section-one__article">              
                 <img src="./Images/1_main/centalized.png" alt="">
                 <h3>Centralized software deployment</h3>
                 <p>Quickly and easily provision virtual network client software to new computers without having to go onsite.</p>
@@ -181,6 +195,7 @@
 
         <!-- Main section 4 -->
         <section id="main-section-four">
+            <div class="mobile-image-bubble"></div>
             <div>
                 <h3>Easy to set up. Easy to manage.</h3>
                 <p>Easily create, manage and maintain virtual private networks from anywhere with LogMeIn Hamachi, a hosted VPN service, that extends secure LAN-like network connectivity to mobile users and distributed teams on-demand over the web.</p>
@@ -194,62 +209,77 @@
                 </p>
             </div>
             
-                <img src="./Images/1_main/hamachi-bubble.png" alt="">
+            <img src="./Images/1_main/hamachi-bubble.png" alt="">
+            
         </section>
 
 
         <!-- Main section 5 -->
-        <section id="pricing">
+        <section id="pricing" class="scroll">
 
             <article>
                 <h3 class="h3-section">Pricing</h3>
                 <p>Hamachi is free for up to 5 computers in your network. If you run Hamachi as a service in unattended mode, you can choose from our subscription packages below.</p>
             </article>
 
-            <div id="packPrices">
-
+            <div class="plans">
                 <!-- 49 -->
-                <article>
+                <div class="plans--card">
                     <h3 class="titlePrice">STANDARD</h3>
                     <div>
-                        <p class="iconPrice">$</p> <p class="amountPrice">49</p> <p class="year">/year</p>
+                        <p class="amountPrice">
+                            <span class="icon-Price">$</span> 
+                            49
+                            <span class="year">/year</span>
+                        </p>
                     </div>
                     <p class="description-price">6-32 computers/network</p>
 
                     <a href="" class="button-buyNow">Buy now</a>  
-                    <div id="recommended-plan" class="align-center">
+                   
+                    <div id="recommended-plan">
                         <p>RECOMMENDED PLAN</p>  
                     </div>
-                </article>
+
+                </div>
 
                 <!-- 199 -->
-                <article>
+                <div class="plans--card">
                     <h3 class="titlePrice">PREMIUM</h3>
                     <div>
-                        <p class="iconPrice">$</p> <p class="amountPrice">199</p> <p class="year">/year</p>
+                        <p class="amountPrice">
+                            <span class="icon-Price2 icon-Price ">$</span>
+                            199
+                            <span class="year-2 year">/year</span>
+                        </p>
                     </div>
                     <p class="description-price">33-256 computers/network</p>
 
                     <a href="" class="button-buyNow">Buy now</a>  
                              
-                </article>
+                </div>
 
-                <!-- 299 -->
-                <article>
+            <!-- 299 -->
+                <div class="plans--card">
                     <h3 class="titlePrice">MULTI-NETWORK</h3>
                     <div>
-                        <p class="iconPrice">$</p> <p class="amountPrice">299</p> <p class="year">/year</p>
+                        <p class="amountPrice">
+                            <span class="icon-Price2 icon-Price ">$</span> 
+                            299
+                            <span class="year-2 year">/year</span>
+                        </p>
                     </div>
                     <p class="description-price">up to 256/unlimited networks</p>
 
                     <a href="" class="button-buyNow">Buy now</a>  
+
                              
-                </article>
+                </div>
             </div>
         </section>
 
         <!-- Main section 6 -->
-        <section id="hamachi-resource-center">
+        <section id="hamachi-resource-center" class="scroll">
             <p>Hamachi Resource Center</p>
             <a href="">Getting Started Guide (PDF)</a>
             <a href="">Support Center</a>
@@ -287,7 +317,7 @@
         </ul>
 
         <div id="copyright">
-            Copyright © 2003-2018 LogMeIn, Inc. All rights reserved.
+            This is a practice page, I love your program.
         </div>
 
     </footer>
